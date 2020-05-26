@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <memory>
 #include "Checkerboard.h"
 
 class Game{
@@ -14,7 +15,7 @@ public:
 
 private:
 
-	Checkerboard *checkerboard;
+	std::shared_ptr<Checkerboard> checkerboard;
 	/*std::string player_1 = "P1";
 	std::string player_2 = "P2";
 

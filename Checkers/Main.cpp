@@ -1,7 +1,7 @@
 #include "Main.h"
 #include "Game.h"
 #include <iostream>
-
+#include <memory>
 int main() {
 
 	int choice = take_input();
@@ -12,8 +12,10 @@ int main() {
 	case 1:
 	{
 		std::cout << "Selected option 1..." << std::endl;
-		Game *game = new Game();
+
+		std::unique_ptr<Game> game(new Game());
 		game->run();
+
 		std::cout << "Finished printing..." << std::endl;
 		break;
 	}

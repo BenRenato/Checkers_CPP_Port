@@ -1,18 +1,17 @@
 #include "Game.h"
+#include <iostream>
 
 Game::Game()
 {
 
-	this->checkerboard = new Checkerboard();
-
-
+	checkerboard = std::shared_ptr<Checkerboard>(new Checkerboard());
 
 }
 
 
 Game::~Game() {
 
-	delete this->checkerboard;
+	std::cout << "Destructor for Game.cpp" << std::endl;
 
 }
 

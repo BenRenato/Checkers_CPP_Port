@@ -9,6 +9,7 @@ Checkerboard::Checkerboard() :board(8, std::vector<int>(8, 0))
 Checkerboard::~Checkerboard() {
 
 	std::vector<std::vector<int>>().swap(board);
+	std::cout << "Death to the checkerboard.cpp!" << std::endl;
 
 }
 void Checkerboard::print_board() {
