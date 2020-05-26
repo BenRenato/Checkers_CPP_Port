@@ -13,7 +13,7 @@ int main() {
 	{
 		std::cout << "Selected option 1..." << std::endl;
 		Game *game = new Game();
-		game->print_board();
+		game->run();
 		std::cout << "Finished printing..." << std::endl;
 		break;
 	}
