@@ -8,7 +8,6 @@ Game::Game()
 
 }
 
-
 Game::~Game() {
 
 	std::cout << "Destructor for Game.cpp" << std::endl;

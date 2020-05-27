@@ -1,23 +1,37 @@
 #include "Checkerboard.h"
 #include <iostream>
 
-Checkerboard::Checkerboard() :board(8, std::vector<int>(8, 0))
+Checkerboard::Checkerboard() :board(8, std::vector<Piece>(8))
 {
-
+	init_board();
 }
 
 Checkerboard::~Checkerboard() {
 
-	std::vector<std::vector<int>>().swap(board);
+	std::vector<std::vector<Piece>>().swap(board);
 	std::cout << "Death to the checkerboard.cpp!" << std::endl;
+
+}
+
+
+void Checkerboard::init_board() {
+
+	for (int i = 0; i < board.size(); i++) {
+
+		if (i % 2 == 0) {
+			
+			this->board[1][i].set_team(Team::white);
+		}
+
+	}
 
 }
 void Checkerboard::print_board() {
 
 	std::cout << "print_board() start" << std::endl;
 
-	std::vector<std::vector<int>>::iterator row;
-	std::vector<int>::iterator col;
+	std::vector<std::vector<Piece>>::iterator row;
+	std::vector<Piece>::iterator col;
 
 	for (row = this->board.begin(); row != this->board.end(); row++) {
 
@@ -30,7 +44,5 @@ void Checkerboard::print_board() {
 		}
 
 	}
-
-
 	std::cout << std::endl << "print_board() end" << std::endl;
 }
