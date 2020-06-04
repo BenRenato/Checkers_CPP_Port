@@ -1,7 +1,8 @@
 #include "Checkerboard.h"
 #include <iostream>
 
-Checkerboard::Checkerboard() :board(8, std::vector<Piece>(8))
+Checkerboard::Checkerboard() 
+	:board(8, std::vector<Piece>(8))
 {
 	init_board();
 }
@@ -21,6 +22,16 @@ void Checkerboard::init_board() {
 		if (i % 2 == 0) {
 			
 			this->board[1][i].set_team(Team::white);
+
+			this->board[5][i].set_team(Team::black);
+			this->board[7][i].set_team(Team::black);
+		}
+		else {
+			
+			this->board[0][i].set_team(Team::white);
+			this->board[2][i].set_team(Team::white);
+
+			this->board[6][i].set_team(Team::black);
 		}
 
 	}

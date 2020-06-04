@@ -2,9 +2,10 @@
 #include <iostream>
 
 Game::Game()
+	:checkerboard (std::shared_ptr<Checkerboard>(new Checkerboard()))
 {
 
-	checkerboard = std::shared_ptr<Checkerboard>(new Checkerboard());
+	
 
 }
 
@@ -16,6 +17,7 @@ Game::~Game() {
 
 void Game::run() {
 
+	std::cout << "Game.run()";
 	this->checkerboard->print_board();
 
 }

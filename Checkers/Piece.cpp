@@ -4,8 +4,6 @@
 Piece::Piece()
 	:team(Team::empty)
 {
-
-
 }
 
 Piece::~Piece() {
@@ -32,7 +30,7 @@ std::ostream& operator<<(std::ostream& output, const Piece& P) {
 	else if (P.team == Team::white) {
 		output << "[W]";
 	}
-	else {
+	else if (P.team == Team::empty) {
 		output << "[_]";
 	}
 
