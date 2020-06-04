@@ -11,9 +11,9 @@ Piece::~Piece() {
 	std::cout << "Deleting piece..." << std::endl;
 }
 
-void Piece::set_team(Team team) {
+void Piece::set_team(Team team_to_set) {
 
-	this->team = team;
+	this->team = team_to_set;
 
 }
 

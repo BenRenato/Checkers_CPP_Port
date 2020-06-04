@@ -17,7 +17,7 @@ Checkerboard::~Checkerboard() {
 
 void Checkerboard::init_board() {
 
-	for (int i = 0; i < board.size(); i++) {
+	for (uint32_t i = 0; i < board.size(); i++) {
 
 		if (i % 2 == 0) {
 			
